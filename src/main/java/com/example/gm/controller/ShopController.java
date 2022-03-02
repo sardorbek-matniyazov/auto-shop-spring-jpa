@@ -37,4 +37,9 @@ public class ShopController {
     public String edit(@PathVariable("id") Long id){
         return service.delete(id);
     }
+
+    @GetMapping(value = "/gmid/{id}")
+    public List<AutoShop> getByGmId(@PathVariable Long id){
+        return service.getByGMId(id);
+    }
 }

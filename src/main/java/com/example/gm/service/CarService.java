@@ -82,4 +82,8 @@ public class CarService {
 
         return "successfully deleted";
     }
+
+    public List<Car> getByShopId(Long id) {
+        return repo.findAllByShopId(id);
+    }
 }

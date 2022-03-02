@@ -38,4 +38,9 @@ public class CarController {
     public String delete(@PathVariable("id") Long id){
         return service.delete(id);
     }
+
+    @GetMapping(value = "/shopid/{id}")
+    public List<Car> getByShopId(@PathVariable Long id){
+        return service.getByShopId(id);
+    }
 }

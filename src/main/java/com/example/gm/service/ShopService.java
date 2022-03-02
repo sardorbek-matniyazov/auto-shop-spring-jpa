@@ -105,4 +105,8 @@ public class ShopService {
         repo.deleteById(id);
         return "successfully deleted";
     }
+
+    public List<AutoShop> getByGMId(Long id) {
+        return repo.findAllByGmId(id);
+    }
 }
